@@ -20,4 +20,10 @@ describe("Duel Duo tests", () => {
     await driver.get("http://localhost:3000")
     await driver.findElement(By.id("draw")).click()
   })
+
+  test('player can click "Add to Duo" button', async () => {
+    await driver.get("http://localhost:3000")
+    await driver.findElement(By.id("draw")).click()
+    await driver.findElement(By.className("bot-btn")).click()
+  })
 });
